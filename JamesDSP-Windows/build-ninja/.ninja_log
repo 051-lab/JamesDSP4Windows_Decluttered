@@ -1,0 +1,16 @@
+# ninja log v7
+210	5620	7878128227386493	JamesDSP-GUI_autogen/timestamp	cd8067e862febdc
+210	5620	7878128227386493	JamesDSP-GUI_autogen/mocs_compilation.cpp	cd8067e862febdc
+210	5620	7878128227386493	C:/Users/gmaym/.gemini/antigravity/playground/cosmic-meteor/JamesDSP-Windows/build-ninja/JamesDSP-GUI_autogen/timestamp	cd8067e862febdc
+210	5620	7878128227386493	C:/Users/gmaym/.gemini/antigravity/playground/cosmic-meteor/JamesDSP-Windows/build-ninja/JamesDSP-GUI_autogen/mocs_compilation.cpp	cd8067e862febdc
+145	6098	7878129394829247	CMakeFiles/JamesDSP-GUI.dir/JamesDSP-GUI_autogen/mocs_compilation.cpp.obj	3b7682389fd25b1b
+6100	12243	7878129454378738	CMakeFiles/JamesDSP-GUI.dir/gui/main.cpp.obj	85fa8d78d6b7a407
+12243	22453	7878129515807659	CMakeFiles/JamesDSP-GUI.dir/gui/MainWindow.cpp.obj	444cbf9362e27c12
+22454	26264	7878129617904017	CMakeFiles/JamesDSP-GUI.dir/gui/DspController.cpp.obj	5fdbe186f140ec06
+26264	29423	7878129656028939	CMakeFiles/JamesDSP-GUI.dir/gui/AudioService.cpp.obj	34eaeb668cab8367
+29424	31084	7878129687615280	CMakeFiles/JamesDSP-GUI.dir/src/DspConfig.cpp.obj	d7c320e6dc07204b
+31084	33697	7878129704221052	JamesDSP-GUI.exe	17f59b2f5c90ee3b
+124	9579	7879611907929394	JamesDSP-GUI_autogen/timestamp	cd8067e862febdc
+124	9579	7879611907929394	JamesDSP-GUI_autogen/mocs_compilation.cpp	cd8067e862febdc
+124	9579	7879611907929394	C:/Users/gmaym/.gemini/antigravity/playground/cosmic-meteor/JamesDSP-Windows/build-ninja/JamesDSP-GUI_autogen/timestamp	cd8067e862febdc
+124	9579	7879611907929394	C:/Users/gmaym/.gemini/antigravity/playground/cosmic-meteor/JamesDSP-Windows/build-ninja/JamesDSP-GUI_autogen/mocs_compilation.cpp	cd8067e862febdc

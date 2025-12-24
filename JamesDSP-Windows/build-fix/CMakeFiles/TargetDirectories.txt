@@ -1,0 +1,5 @@
+C:/Users/gmaym/.gemini/antigravity/playground/blazing-comet/JamesDSP-Windows/build-fix/CMakeFiles/JamesDSP-GUI.dir
+C:/Users/gmaym/.gemini/antigravity/playground/blazing-comet/JamesDSP-Windows/build-fix/CMakeFiles/edit_cache.dir
+C:/Users/gmaym/.gemini/antigravity/playground/blazing-comet/JamesDSP-Windows/build-fix/CMakeFiles/rebuild_cache.dir
+C:/Users/gmaym/.gemini/antigravity/playground/blazing-comet/JamesDSP-Windows/build-fix/CMakeFiles/JamesDSP-GUI_autogen_timestamp_deps.dir
+C:/Users/gmaym/.gemini/antigravity/playground/blazing-comet/JamesDSP-Windows/build-fix/CMakeFiles/JamesDSP-GUI_autogen.dir

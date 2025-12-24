@@ -1,0 +1,367 @@
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[TOGGLE] enabled=0 m_processing=0
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6cc0bb5f-87ff-4bd2-b6bb-697d6a57e357} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[TOGGLE] enabled=0 m_processing=0
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6cc0bb5f-87ff-4bd2-b6bb-697d6a57e357} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6cc0bb5f-87ff-4bd2-b6bb-697d6a57e357} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[TOGGLE] enabled=0 m_processing=0
+[TOGGLE] enabled=1 m_processing=0
+[TOGGLE] enabled=0 m_processing=0
+[TOGGLE] enabled=1 m_processing=0
+[TOGGLE] enabled=0 m_processing=0
+[COMBO-CAP] m_processing=0 newCap= oldCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa}
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa}
+[COMBO-CAP] m_processing=0 newCap= oldCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa}
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa}
+[COMBO-CAP] m_processing=0 newCap= oldCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa}
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa}
+[COMBO-CAP] m_processing=0 newCap= oldCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa}
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa}
+[COMBO-CAP] m_processing=0 newCap= oldCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa}
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa}
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa}
+[TOGGLE] enabled=1 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0
+[TOGGLE] enabled=0 m_processing=0
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap= oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{01e9e479-219b-4632-80d9-9e688ae2a5a1} oldCap=
+[COMBO-CAP] m_processing=0 newCap={0.0.0.00000000}.{6e1eb348-2ca8-4a29-9439-5a5e65da4daa} oldCap=
+[TOGGLE] enabled=1 m_processing=0

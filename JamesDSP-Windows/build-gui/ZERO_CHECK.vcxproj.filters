@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\gmaym\.gemini\antigravity\playground\silver-prominence\JamesDSP-Windows\build-gui\CMakeFiles\6c0ca2a29377e561755796cb0d216a5b\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2416083B-B664-3ADB-8CF5-99839F35275C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\gmaym\.gemini\antigravity\playground\cosmic-meteor\JamesDSP-Windows\build\JamesDSP-GUI_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gmaym\.gemini\antigravity\playground\cosmic-meteor\JamesDSP-Windows\gui\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gmaym\.gemini\antigravity\playground\cosmic-meteor\JamesDSP-Windows\gui\MainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gmaym\.gemini\antigravity\playground\cosmic-meteor\JamesDSP-Windows\gui\DspController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gmaym\.gemini\antigravity\playground\cosmic-meteor\JamesDSP-Windows\gui\AudioService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gmaym\.gemini\antigravity\playground\cosmic-meteor\JamesDSP-Windows\src\DspConfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gmaym\.gemini\antigravity\playground\cosmic-meteor\JamesDSP-Windows\build\JamesDSP-GUI_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gmaym\.gemini\antigravity\playground\cosmic-meteor\JamesDSP-Windows\build\JamesDSP-GUI_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\gmaym\.gemini\antigravity\playground\cosmic-meteor\JamesDSP-Windows\build\JamesDSP-GUI_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\gmaym\.gemini\antigravity\playground\cosmic-meteor\JamesDSP-Windows\gui\MainWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\gmaym\.gemini\antigravity\playground\cosmic-meteor\JamesDSP-Windows\gui\widgets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\gmaym\.gemini\antigravity\playground\cosmic-meteor\JamesDSP-Windows\gui\curve_widgets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\gmaym\.gemini\antigravity\playground\cosmic-meteor\JamesDSP-Windows\gui\DspController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\gmaym\.gemini\antigravity\playground\cosmic-meteor\JamesDSP-Windows\gui\AudioService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\gmaym\.gemini\antigravity\playground\cosmic-meteor\JamesDSP-Windows\src\DspConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\gmaym\.gemini\antigravity\playground\cosmic-meteor\JamesDSP-Windows\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5079DB76-AA6C-3D6D-8858-F61C1BFA419D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{C02A70B4-6106-34D3-9519-5B9A1A9C2142}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

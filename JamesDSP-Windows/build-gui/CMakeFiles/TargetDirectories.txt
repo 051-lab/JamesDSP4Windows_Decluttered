@@ -1,0 +1,3 @@
+C:/Users/gmaym/.gemini/antigravity/playground/silver-prominence/JamesDSP-Windows/build-gui/CMakeFiles/JamesDSP-GUI.dir
+C:/Users/gmaym/.gemini/antigravity/playground/silver-prominence/JamesDSP-Windows/build-gui/CMakeFiles/ALL_BUILD.dir
+C:/Users/gmaym/.gemini/antigravity/playground/silver-prominence/JamesDSP-Windows/build-gui/CMakeFiles/ZERO_CHECK.dir
