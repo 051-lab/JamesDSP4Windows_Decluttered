@@ -1,3 +1,0 @@
-C:/Users/gmaym/.gemini/antigravity/playground/cosmic-meteor/JamesDSP-Windows/build/CMakeFiles/JamesDSP-GUI.dir
-C:/Users/gmaym/.gemini/antigravity/playground/cosmic-meteor/JamesDSP-Windows/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/gmaym/.gemini/antigravity/playground/cosmic-meteor/JamesDSP-Windows/build/CMakeFiles/ZERO_CHECK.dir
