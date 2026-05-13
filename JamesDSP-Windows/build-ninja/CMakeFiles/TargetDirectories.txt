@@ -1,5 +1,0 @@
-C:/Users/gmaym/.gemini/antigravity/playground/cosmic-meteor/JamesDSP-Windows/build-ninja/CMakeFiles/JamesDSP-GUI.dir
-C:/Users/gmaym/.gemini/antigravity/playground/cosmic-meteor/JamesDSP-Windows/build-ninja/CMakeFiles/edit_cache.dir
-C:/Users/gmaym/.gemini/antigravity/playground/cosmic-meteor/JamesDSP-Windows/build-ninja/CMakeFiles/rebuild_cache.dir
-C:/Users/gmaym/.gemini/antigravity/playground/cosmic-meteor/JamesDSP-Windows/build-ninja/CMakeFiles/JamesDSP-GUI_autogen_timestamp_deps.dir
-C:/Users/gmaym/.gemini/antigravity/playground/cosmic-meteor/JamesDSP-Windows/build-ninja/CMakeFiles/JamesDSP-GUI_autogen.dir
