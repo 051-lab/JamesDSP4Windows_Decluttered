@@ -1,8 +1,0 @@
-[2025-12-20 11:16:44.698] [DEBUG] JamesDSP Starting...
-[2025-12-20 11:16:44.713] [WARN] Could not find the Qt platform plugin "windows" in ""
-[2025-12-20 11:16:44.714] [FATAL] This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
-
-[2025-12-22 05:57:50.109] [DEBUG] JamesDSP Starting...
-[2025-12-22 05:57:50.142] [WARN] Could not find the Qt platform plugin "windows" in ""
-[2025-12-22 05:57:50.142] [FATAL] This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
-
