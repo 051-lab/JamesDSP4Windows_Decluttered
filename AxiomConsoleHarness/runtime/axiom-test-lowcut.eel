@@ -1,0 +1,91 @@
+desc: Axiom Route Test - Extreme Low Cut
+// Temporary routing-verification script. Not an Axiom candidate.
+
+slider1:3500<80,6000,10>Low-cut frequency (Hz)
+slider2:8<1,8,1>Filter stages
+
+@init
+twoPi = 6.283185307179586;
+
+// UI Defaults
+slider1 = 3500;
+slider2 = 8;
+
+lastFreq = -1;
+lastStages = -1;
+x1_l = 0; y1_l = 0; x2_l = 0; y2_l = 0; x3_l = 0; y3_l = 0; x4_l = 0; y4_l = 0;
+x5_l = 0; y5_l = 0; x6_l = 0; y6_l = 0; x7_l = 0; y7_l = 0; x8_l = 0; y8_l = 0;
+x1_r = 0; y1_r = 0; x2_r = 0; y2_r = 0; x3_r = 0; y3_r = 0; x4_r = 0; y4_r = 0;
+x5_r = 0; y5_r = 0; x6_r = 0; y6_r = 0; x7_r = 0; y7_r = 0; x8_r = 0; y8_r = 0;
+
+@sample
+freq = max(20, min(slider1, srate * 0.45));
+stages = max(1, min(8, floor(slider2 + 0.5)));
+
+freq != lastFreq || stages != lastStages ? (
+  rc = 1 / (twoPi * freq);
+  dt = 1 / srate;
+  hpA = rc / (rc + dt);
+  lastFreq = freq;
+  lastStages = stages;
+);
+
+in_l = spl0;
+in_r = spl1;
+
+y1_l = hpA * (y1_l + in_l - x1_l); x1_l = in_l;
+y1_r = hpA * (y1_r + in_r - x1_r); x1_r = in_r;
+out_l = y1_l;
+out_r = y1_r;
+
+stages >= 2 ? (
+  y2_l = hpA * (y2_l + out_l - x2_l); x2_l = out_l;
+  y2_r = hpA * (y2_r + out_r - x2_r); x2_r = out_r;
+  out_l = y2_l;
+  out_r = y2_r;
+);
+
+stages >= 3 ? (
+  y3_l = hpA * (y3_l + out_l - x3_l); x3_l = out_l;
+  y3_r = hpA * (y3_r + out_r - x3_r); x3_r = out_r;
+  out_l = y3_l;
+  out_r = y3_r;
+);
+
+stages >= 4 ? (
+  y4_l = hpA * (y4_l + out_l - x4_l); x4_l = out_l;
+  y4_r = hpA * (y4_r + out_r - x4_r); x4_r = out_r;
+  out_l = y4_l;
+  out_r = y4_r;
+);
+
+stages >= 5 ? (
+  y5_l = hpA * (y5_l + out_l - x5_l); x5_l = out_l;
+  y5_r = hpA * (y5_r + out_r - x5_r); x5_r = out_r;
+  out_l = y5_l;
+  out_r = y5_r;
+);
+
+stages >= 6 ? (
+  y6_l = hpA * (y6_l + out_l - x6_l); x6_l = out_l;
+  y6_r = hpA * (y6_r + out_r - x6_r); x6_r = out_r;
+  out_l = y6_l;
+  out_r = y6_r;
+);
+
+stages >= 7 ? (
+  y7_l = hpA * (y7_l + out_l - x7_l); x7_l = out_l;
+  y7_r = hpA * (y7_r + out_r - x7_r); x7_r = out_r;
+  out_l = y7_l;
+  out_r = y7_r;
+);
+
+stages >= 8 ? (
+  y8_l = hpA * (y8_l + out_l - x8_l); x8_l = out_l;
+  y8_r = hpA * (y8_r + out_r - x8_r); x8_r = out_r;
+  out_l = y8_l;
+  out_r = y8_r;
+);
+
+spl0 = out_l;
+spl1 = out_r;

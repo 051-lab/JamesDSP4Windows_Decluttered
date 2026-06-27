@@ -1,0 +1,18 @@
+# Axiom Windows harness build output
+build-axiom-console/
+AxiomConsoleHarness/**/bin/
+AxiomConsoleHarness/**/obj/
+AxiomConsoleHarness/dist/
+
+# Axiom Windows harness local runtime state
+AxiomConsoleHarness/axiom-liveprog-test.ini
+AxiomConsoleHarness/controller-state.json
+AxiomConsoleHarness/profiles/
+AxiomConsoleHarness/runtime/*
+!AxiomConsoleHarness/runtime/
+!AxiomConsoleHarness/runtime/axiom-test-lowcut.eel
+!AxiomConsoleHarness/runtime/axiom-test-pulse-gate.eel
+
+# Local/debug artifacts produced by Windows testing
+JamesDSP-Windows/build-final/debug_log.txt
+JamesDSP-Windows/build-final/assets/dexopt/

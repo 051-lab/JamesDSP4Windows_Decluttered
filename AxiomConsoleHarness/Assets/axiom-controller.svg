@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Axiom JamesDSP Controller icon">
+  <defs>
+    <linearGradient id="bg" x1="40" y1="24" x2="216" y2="232" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#05070a"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="52" y1="190" x2="204" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="0.52" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="224" height="224" rx="48" fill="url(#bg)"/>
+  <rect x="22" y="22" width="212" height="212" rx="42" fill="none" stroke="#1f2937" stroke-width="4"/>
+  <path d="M62 178 L111 70 C116 58 133 58 138 70 L194 178" fill="none" stroke="url(#signal)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M91 138 H164" fill="none" stroke="#e5f9ff" stroke-width="14" stroke-linecap="round"/>
+  <path d="M57 108 C71 95 88 95 102 108 C116 121 133 121 147 108 C161 95 179 95 198 111" fill="none" stroke="#22d3ee" stroke-width="8" stroke-linecap="round" opacity="0.86"/>
+  <circle cx="128" cy="128" r="101" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.12"/>
+</svg>

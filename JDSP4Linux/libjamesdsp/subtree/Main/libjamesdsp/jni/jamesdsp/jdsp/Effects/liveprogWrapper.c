@@ -175,11 +175,11 @@ void LiveProgSetVar(JamesDSPLib *jdsp, const char* name, double value)
     if (!jdsp->eel.vm || !jdsp->eel.compileSucessfully) return;
 
     jdsp_lock(jdsp);
-    // NSEEL_VM_regvar returns a pointer to the variable's value. 
-    // If it doesn't exist, it registers it.
-    double *varPtr = NSEEL_VM_regvar(jdsp->eel.vm, (char*)name);
+    // NSEEL variables use EEL's float storage. Writing a double here corrupts
+    // the adjacent VM variable because NSEEL_VM_regvar returns float*.
+    float *varPtr = NSEEL_VM_regvar(jdsp->eel.vm, name);
     if (varPtr) {
-        *varPtr = value;
+        *varPtr = (float)value;
     }
     jdsp_unlock(jdsp);
 }

@@ -103,6 +103,7 @@ struct DspConfig {
     // === LiveProg (EEL Scripting) ===
     bool liveprogEnabled = false;
     std::string liveprogFile;  // Path to .eel script
+    std::map<std::string, double> liveprogParams;
     
     // === Arbitrary Magnitude EQ ===
     bool arbMagEnabled = false;

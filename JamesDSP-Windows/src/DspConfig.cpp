@@ -74,6 +74,7 @@ bool ConfigFile::load(const std::string& filename, DspConfig& config) {
         std::cout << "[CONFIG] No config file found, using defaults" << std::endl;
         return false;
     }
+    config.liveprogParams.clear();
     
     std::string line, currentSection;
     while (std::getline(file, line)) {
@@ -141,6 +142,9 @@ bool ConfigFile::load(const std::string& filename, DspConfig& config) {
         else if (currentSection == "liveprog") {
             if (key == "enabled") config.liveprogEnabled = parseBool(value);
             else if (key == "file") config.liveprogFile = value;
+            else if (key.rfind("param.", 0) == 0 && key.size() > 6) {
+                config.liveprogParams[key.substr(6)] = parseDouble(value);
+            }
         }
         else if (currentSection == "general") {
             if (key == "postgain") config.postGain = parseDouble(value);
@@ -215,6 +219,9 @@ bool ConfigFile::save(const std::string& filename, const DspConfig& config) {
     file << "[LiveProg]\n";
     file << "enabled = " << (config.liveprogEnabled ? "true" : "false") << "\n";
     file << "file = " << config.liveprogFile << "\n";
+    for (const auto& param : config.liveprogParams) {
+        file << "param." << param.first << " = " << param.second << "\n";
+    }
     
     return true;
 }
@@ -418,16 +425,24 @@ void DspController::applyLiveprog(const DspConfig& config) {
                 std::string content = buffer.str();
                 
                 int result = LiveProgStringParser(m_dsp, const_cast<char*>(content.c_str()));
-                if (result == 0) {
+                if (result > 0) {
                     LiveProgEnable(m_dsp);
                     m_loadedLiveprogFile = config.liveprogFile;
-                    std::cout << "[LIVEPROG] Loaded: " << config.liveprogFile << std::endl;
+                    std::cout << "[LIVEPROG] Loaded: " << config.liveprogFile
+                              << " (" << checkErrorCode(result) << ")" << std::endl;
                 } else {
                     std::cerr << "[LIVEPROG] Compilation error (" << result << "): " 
                               << checkErrorCode(result) << std::endl;
+                    LiveProgDisable(m_dsp);
+                    m_loadedLiveprogFile.clear();
                 }
             } else {
                 std::cerr << "[LIVEPROG] File not found: " << config.liveprogFile << std::endl;
+            }
+        }
+        if (m_loadedLiveprogFile == config.liveprogFile) {
+            for (const auto& param : config.liveprogParams) {
+                LiveProgSetVar(m_dsp, param.first.c_str(), param.second);
             }
         }
     } else {
@@ -447,20 +462,85 @@ void DspController::applyArbMag(const DspConfig& config) {
 }
 
 void DspController::applyConfig(const DspConfig& config, bool forceRefresh) {
-    applyLimiter(config);
-    applyBassBoost(config);
-    applyStereoWide(config);
-    applyReverb(config);
-    applyTube(config);
-    applyCompressor(config);
-    applyEqualizer(config);
-    applyCrossfeed(config);
-    applyDdc(config);
-    applyConvolver(config);
-    applyLiveprog(config);
-    applyArbMag(config);
-    
-    JamesDSPSetPostGain(m_dsp, config.postGain);
+    if (forceRefresh) {
+        m_loadedLiveprogFile.clear();
+        m_loadedDdcFile.clear();
+        m_loadedConvolverFile.clear();
+    }
+
+    if (forceRefresh ||
+        config.limiterThreshold != m_currentConfig.limiterThreshold ||
+        config.limiterRelease != m_currentConfig.limiterRelease) {
+        applyLimiter(config);
+    }
+    if (forceRefresh ||
+        config.bassBoostEnabled != m_currentConfig.bassBoostEnabled ||
+        config.bassBoostGain != m_currentConfig.bassBoostGain) {
+        applyBassBoost(config);
+    }
+    if (forceRefresh ||
+        config.stereoWideEnabled != m_currentConfig.stereoWideEnabled ||
+        config.stereoWideLevel != m_currentConfig.stereoWideLevel) {
+        applyStereoWide(config);
+    }
+    if (forceRefresh ||
+        config.reverbEnabled != m_currentConfig.reverbEnabled ||
+        config.reverbPreset != m_currentConfig.reverbPreset) {
+        applyReverb(config);
+    }
+    if (forceRefresh ||
+        config.tubeEnabled != m_currentConfig.tubeEnabled ||
+        config.tubeGain != m_currentConfig.tubeGain) {
+        applyTube(config);
+    }
+    if (forceRefresh ||
+        config.compressorEnabled != m_currentConfig.compressorEnabled ||
+        config.compressorGranularity != m_currentConfig.compressorGranularity ||
+        config.compressorTimeConstant != m_currentConfig.compressorTimeConstant ||
+        config.compressorTfResolution != m_currentConfig.compressorTfResolution ||
+        config.compressorGains != m_currentConfig.compressorGains) {
+        applyCompressor(config);
+    }
+    if (forceRefresh ||
+        config.eqEnabled != m_currentConfig.eqEnabled ||
+        config.eqMode != m_currentConfig.eqMode ||
+        config.eqInterpolation != m_currentConfig.eqInterpolation ||
+        config.eqGains != m_currentConfig.eqGains) {
+        applyEqualizer(config);
+    }
+    if (forceRefresh ||
+        config.crossfeedEnabled != m_currentConfig.crossfeedEnabled ||
+        config.crossfeedMode != m_currentConfig.crossfeedMode) {
+        applyCrossfeed(config);
+    }
+    if (forceRefresh ||
+        config.ddcEnabled != m_currentConfig.ddcEnabled ||
+        config.ddcFile != m_currentConfig.ddcFile) {
+        applyDdc(config);
+    }
+    if (forceRefresh ||
+        config.convolverEnabled != m_currentConfig.convolverEnabled ||
+        config.convolverFile != m_currentConfig.convolverFile) {
+        applyConvolver(config);
+    }
+    if (forceRefresh ||
+        config.liveprogEnabled != m_currentConfig.liveprogEnabled ||
+        config.liveprogFile != m_currentConfig.liveprogFile) {
+        applyLiveprog(config);
+    } else if (config.liveprogEnabled &&
+               config.liveprogParams != m_currentConfig.liveprogParams) {
+        for (const auto& param : config.liveprogParams) {
+            LiveProgSetVar(m_dsp, param.first.c_str(), param.second);
+        }
+    }
+    if (forceRefresh ||
+        config.arbMagEnabled != m_currentConfig.arbMagEnabled ||
+        config.arbMagResponse != m_currentConfig.arbMagResponse) {
+        applyArbMag(config);
+    }
+    if (forceRefresh || config.postGain != m_currentConfig.postGain) {
+        JamesDSPSetPostGain(m_dsp, config.postGain);
+    }
     
     m_currentConfig = config;
 }

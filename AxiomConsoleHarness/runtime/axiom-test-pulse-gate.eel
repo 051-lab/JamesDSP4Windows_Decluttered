@@ -1,0 +1,24 @@
+desc: Axiom Route Test - Pulse Gate
+// Temporary LiveProg routing-verification script. Not an Axiom candidate.
+
+slider1:2<0.5,8,0.5>Pulse rate (Hz)
+slider2:-48<-60,-6,1>Muted level (dB)
+
+@init
+DB_2_LOG = 0.11512925464970228;
+
+// UI Defaults
+slider1 = 2;
+slider2 = -48;
+
+phase = 0;
+
+@sample
+rate = max(0.1, slider1);
+phase += rate / srate;
+phase >= 1 ? phase -= 1;
+
+gate = phase < 0.5 ? 1 : exp(slider2 * DB_2_LOG);
+
+spl0 *= gate;
+spl1 *= gate;

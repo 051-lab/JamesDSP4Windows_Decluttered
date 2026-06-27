@@ -9,12 +9,13 @@ strength:800<0,1200>Strength
 strength = 800.00;
 
 function DepthSurround_Init() (
+    this.delay0 = 20000; // Arbitrary offset start
     req = fractionalDelayLineInit(this.delay0, 256);
-    ptr1 = ptr1 + req;
+    this.delay1 = this.delay0 + req;
     req = fractionalDelayLineInit(this.delay1, 256);
     
-    fractionalDelayLineSetDelay(this.delay0, 20);
-    fractionalDelayLineSetDelay(this.delay1, 140);
+    fractionalDelayLineSetDelay(this.delay0, 20); // Samples
+    fractionalDelayLineSetDelay(this.delay1, 140); // Samples
 );
 
 function DepthSurround_SetStrength(strength) (
@@ -37,8 +38,8 @@ function DepthSurround_ProcessSamples(left right) (
     this.prev0 = this.gain * fractionalDelayLineProcess(this.delay0, left + this.prev1);
     this.prev1 = _gain * fractionalDelayLineProcess(this.delay1, right + this.prev0);
 
-    this.outL = this.prev0 + sampleLeft;
-    this.outR = this.prev1 + sampleRight;
+    this.outL = this.prev0 + left;
+    this.outR = this.prev1 + right;
 );
 
 function DepthSurround_GetProcessedL() (
