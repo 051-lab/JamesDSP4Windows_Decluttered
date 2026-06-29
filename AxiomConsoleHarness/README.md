@@ -208,6 +208,11 @@ Phase 1 hardening:
   output disconnects, it preserves the intended endpoint IDs, stops an active
   processor, shows a recovery-waiting state, and automatically restores the
   route and restarts processing when both endpoints return.
+- `Follow listening device` is enabled by default. When VB-CABLE is available,
+  the controller keeps it as the source endpoint, prefers newly connected
+  listening devices such as EarPods, headphones, USB, or Bluetooth outputs, and
+  falls back to Realtek or another physical output when the external device is
+  removed.
 - The controller includes a one-click Steam-to-Realtek route preset for laptop
   speaker testing.
 - Temporary route-test EEL files live under `runtime/` and are not accepted

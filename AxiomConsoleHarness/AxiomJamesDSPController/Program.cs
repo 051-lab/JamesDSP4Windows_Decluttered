@@ -165,6 +165,7 @@ internal sealed class ControllerState
     public bool CloseToTray { get; set; } = false;
     public bool StartWithWindows { get; set; } = false;
     public bool AutoStartProcessor { get; set; } = false;
+    public bool AutoFollowListeningDevice { get; set; } = true;
 }
 
 internal sealed class AxiomProfile
@@ -495,6 +496,12 @@ internal sealed class MainForm : Form
         {
             controllerState.AutoStartProcessor = value;
             SaveControllerState();
+        }));
+        lifecycle.Controls.Add(StateCheckBox("Follow listening device", controllerState.AutoFollowListeningDevice, value =>
+        {
+            controllerState.AutoFollowListeningDevice = value;
+            SaveControllerState();
+            if (value) AutoRouteListeningDevice(restartProcessor: IsProcessorRunning());
         }));
         lifecycle.Controls.Add(StateCheckBox("Restore previous output on exit", controllerState.RestoreDefaultOnExit, value =>
         {
@@ -903,6 +910,10 @@ internal sealed class MainForm : Form
             processorRestartPending = false;
             processorRestartTimer.Stop();
         }
+        if (controllerState.AutoFollowListeningDevice)
+        {
+            AutoRouteListeningDevice(restartProcessor: false);
+        }
         StopAllProcessors();
         SaveConfigAndRuntimeEel();
         var capture = captureDevice.SelectedItem as DeviceInfo;
@@ -1304,6 +1315,10 @@ internal sealed class MainForm : Form
         UpdateStatus();
         RefreshSetupStatus();
         UpdateWindowsDefaultStatus();
+        if (controllerState.AutoFollowListeningDevice)
+        {
+            AutoRouteListeningDevice(restartProcessor: false);
+        }
     }
 
     private List<DeviceInfo>? EnumerateDevices()
@@ -1361,6 +1376,16 @@ internal sealed class MainForm : Form
         var fingerprint = DeviceFingerprint(devices);
         var capturePresent = DeviceIdExists(devices, controllerState.CaptureId);
         var outputPresent = DeviceIdExists(devices, controllerState.OutputId);
+        if (controllerState.AutoFollowListeningDevice && capturePresent)
+        {
+            if (AutoRouteListeningDevice(devices, restartProcessor: IsProcessorRunning()))
+            {
+                lastDeviceFingerprint = fingerprint;
+                UpdateWindowsDefaultStatus();
+                return;
+            }
+            outputPresent = DeviceIdExists(devices, controllerState.OutputId);
+        }
 
         if (!capturePresent || !outputPresent)
         {
@@ -1422,6 +1447,63 @@ internal sealed class MainForm : Form
         }
         lastDeviceFingerprint = fingerprint;
         UpdateWindowsDefaultStatus();
+    }
+
+    private bool AutoRouteListeningDevice(bool restartProcessor)
+    {
+        var devices = EnumerateDevices();
+        return devices is not null && AutoRouteListeningDevice(devices, restartProcessor);
+    }
+
+    private bool AutoRouteListeningDevice(IReadOnlyList<DeviceInfo> devices, bool restartProcessor)
+    {
+        var previousCaptureId = (captureDevice.SelectedItem as DeviceInfo)?.Id ?? controllerState.CaptureId;
+        var previousOutputId = (outputDevice.SelectedItem as DeviceInfo)?.Id ?? controllerState.OutputId;
+        var previousOutputName = (outputDevice.SelectedItem as DeviceInfo)?.Name ?? "";
+        DeviceInfo? selectedCapture = null;
+        DeviceInfo? selectedOutput = null;
+
+        suppressUiEvents = true;
+        try
+        {
+            ReplaceDeviceItems(devices);
+            if (!SelectPreferredVbCable(captureDevice))
+            {
+                SelectDevice(captureDevice, controllerState.CaptureId, controllerState.CaptureIndex, 0);
+            }
+
+            selectedCapture = captureDevice.SelectedItem as DeviceInfo;
+            selectedOutput = SelectBestListeningOutput(outputDevice, selectedCapture);
+            if (selectedOutput is null)
+            {
+                SelectDevice(outputDevice, controllerState.OutputId, controllerState.OutputIndex, 0);
+                selectedOutput = outputDevice.SelectedItem as DeviceInfo;
+            }
+        }
+        finally
+        {
+            suppressUiEvents = false;
+        }
+
+        var changed = selectedCapture is not null
+            && selectedOutput is not null
+            && (!selectedCapture.Id.Equals(previousCaptureId, StringComparison.OrdinalIgnoreCase)
+                || !selectedOutput.Id.Equals(previousOutputId, StringComparison.OrdinalIgnoreCase));
+        if (!changed) return false;
+
+        SaveSelectedRoute();
+        routeRecoveryPending = false;
+        restartAfterRouteRecovery = false;
+        SetWindowsDefaultToCapture();
+        AppendLog($"Auto-routed listening output: {previousOutputName} -> {selectedOutput?.Name}.");
+        if (restartProcessor)
+        {
+            processorFailureState = "Processor restarted after automatic route change.";
+            StartProcessor(automaticRestart: true);
+        }
+        UpdateStatus();
+        RefreshSetupStatus();
+        return true;
     }
 
     private static bool DeviceIdExists(IEnumerable<DeviceInfo> devices, string id)
@@ -2623,8 +2705,12 @@ internal sealed class MainForm : Form
 
     private static bool SelectPreferredPhysicalOutput(ComboBox combo)
     {
-        if (SelectDeviceByName(combo, "Realtek")) return true;
         if (SelectDeviceByName(combo, "EarPods")) return true;
+        if (SelectDeviceByName(combo, "Headphones")) return true;
+        if (SelectDeviceByName(combo, "Headset")) return true;
+        if (SelectDeviceByName(combo, "USB")) return true;
+        if (SelectDeviceByName(combo, "Bluetooth")) return true;
+        if (SelectDeviceByName(combo, "Realtek")) return true;
         for (var i = 0; i < combo.Items.Count; i++)
         {
             if (combo.Items[i] is DeviceInfo device && !IsVirtualSource(device))
@@ -2634,6 +2720,44 @@ internal sealed class MainForm : Form
             }
         }
         return false;
+    }
+
+    private static DeviceInfo? SelectBestListeningOutput(ComboBox combo, DeviceInfo? capture)
+    {
+        DeviceInfo? best = null;
+        var bestScore = int.MinValue;
+        var bestItemIndex = -1;
+        for (var i = 0; i < combo.Items.Count; i++)
+        {
+            if (combo.Items[i] is not DeviceInfo candidate) continue;
+            if (capture is not null && candidate.Id.Equals(capture.Id, StringComparison.OrdinalIgnoreCase)) continue;
+            var score = ListeningOutputScore(candidate);
+            if (score <= 0) continue;
+            if (score > bestScore)
+            {
+                best = candidate;
+                bestScore = score;
+                bestItemIndex = i;
+            }
+        }
+
+        if (bestItemIndex >= 0) combo.SelectedIndex = bestItemIndex;
+        return best;
+    }
+
+    private static int ListeningOutputScore(DeviceInfo device)
+    {
+        if (IsVirtualSource(device)) return 0;
+        var name = device.Name;
+        if (name.Contains("EarPods", StringComparison.OrdinalIgnoreCase)) return 1000;
+        if (name.Contains("Headphones", StringComparison.OrdinalIgnoreCase)) return 950;
+        if (name.Contains("Headset", StringComparison.OrdinalIgnoreCase)) return 940;
+        if (name.Contains("USB", StringComparison.OrdinalIgnoreCase)) return 900;
+        if (name.Contains("Bluetooth", StringComparison.OrdinalIgnoreCase)) return 850;
+        if (name.Contains("Realtek", StringComparison.OrdinalIgnoreCase)) return 600;
+        if (name.Contains("Speaker", StringComparison.OrdinalIgnoreCase)) return 500;
+        if (name.Contains("AUX", StringComparison.OrdinalIgnoreCase)) return 450;
+        return 300;
     }
 
     private static bool SelectDeviceByExactName(ComboBox combo, string name)
