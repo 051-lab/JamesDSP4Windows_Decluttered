@@ -17,6 +17,9 @@ Routing:
 - "Restore Previous Default" returns Windows to the output that was active
   before Axiom took route ownership.
 - Setup & System can restore the previous output automatically when Axiom exits.
+- DAWs should use a Windows/WASAPI-compatible output routed to VB-CABLE for
+  this controller path. ASIO4ALL is a future native-ASIO engine track and is
+  not expected to appear as a normal Axiom source endpoint.
 
 Profiles:
 - Profiles can be created, updated, loaded, duplicated, renamed, deleted,

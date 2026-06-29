@@ -326,6 +326,11 @@ portable package and an installed Program Files application root. It generates
 local JSON and Markdown evidence and restores the preceding Windows default
 endpoint when finished.
 
+For the current controller wrap-up checklist, see
+[`CONTROLLER-WRAPUP.md`](CONTROLLER-WRAPUP.md). Use
+`Start 1-Hour Validation Test.bat` as the shorter installed-build validation
+gate before scheduling the full eight-hour qualification run.
+
 Live Axiom slider changes are sent to JamesDSP through `LiveProgSetVar`.
 Changing a slider no longer recompiles the EEL script. Script compilation is
 reserved for processor startup or selecting a different LiveProg file, which
@@ -339,5 +344,9 @@ keeps normal control changes out of the real-time audio path.
    machine. Controller and installer release metadata are centralized at
    version `0.2.0`; `signtool.exe` is installed, but a trusted code-signing
    certificate still needs to be provisioned.
-3. Revisit a custom virtual endpoint only if dedicated VB-CABLE routing proves
+3. Keep ASIO4ALL/native-ASIO support as a future engine track. FL Studio with
+   ASIO4ALL did not feed either visible VB-CABLE render endpoint during the
+   2026-06-29 routing test, so the current Controller should continue to target
+   WASAPI/VB-CABLE routes.
+4. Revisit a custom virtual endpoint only if dedicated VB-CABLE routing proves
    insufficient.

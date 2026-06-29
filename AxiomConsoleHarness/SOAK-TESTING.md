@@ -27,6 +27,12 @@ regressions before a longer run.
 
 ## One-Hour Gate
 
+The simplest way to start the installed one-hour validation is to double-click:
+
+```text
+Start 1-Hour Validation Test.bat
+```
+
 Run against a freshly built portable package:
 
 ```bat
