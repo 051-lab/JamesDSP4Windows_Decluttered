@@ -230,6 +230,7 @@ internal sealed class MainForm : Form
     private string processorFailureState = "";
     private bool profileDirty = false;
     private string lastDeviceFingerprint = "";
+    private string lastRouteEvent = "No route events yet.";
 
     private readonly Icon appIcon = LoadAppIcon();
     private Process? processor;
@@ -253,10 +254,14 @@ internal sealed class MainForm : Form
     private Label audioHealthLabel = new();
     private Label performanceHealthLabel = new();
     private Label routeHelpLabel = new();
+    private Label routeStateLabel = new();
     private Label routeStatusLabel = new();
+    private Label routeEventLabel = new();
     private Label windowsDefaultLabel = new();
     private Label scriptStatusLabel = new();
+    private Label diagnosticsRouteStateLabel = new();
     private Label diagnosticsRouteLabel = new();
+    private Label diagnosticsRouteEventLabel = new();
     private Label diagnosticsScriptLabel = new();
     private Label diagnosticsProcessorLabel = new();
     private Label diagnosticsProfileLabel = new();
@@ -557,9 +562,17 @@ internal sealed class MainForm : Form
         };
         panel.Controls.Add(routeHelpLabel);
 
+        routeStateLabel = HealthLabel("Route state: --");
+        routeStateLabel.MaximumSize = new Size(1050, 0);
+        panel.Controls.Add(routeStateLabel);
+
         routeStatusLabel = HealthLabel("Route: --");
         routeStatusLabel.MaximumSize = new Size(1050, 0);
         panel.Controls.Add(routeStatusLabel);
+
+        routeEventLabel = HealthLabel("Last route event: --");
+        routeEventLabel.MaximumSize = new Size(1050, 0);
+        panel.Controls.Add(routeEventLabel);
 
         scriptStatusLabel = HealthLabel("Script: --");
         scriptStatusLabel.MaximumSize = new Size(1050, 0);
@@ -630,6 +643,7 @@ internal sealed class MainForm : Form
         liveProgButtons.Controls.Add(Button("Load Low-Cut Test", (_, _) => LoadLowCutTest()));
         liveProgButtons.Controls.Add(Button("Load Pulse Test", (_, _) => LoadPulseGateTest()));
         liveProgButtons.Controls.Add(Button("Restore Axiom EEL", (_, _) => RestoreAxiomLiveProg()));
+        liveProgButtons.Controls.Add(Button("Restore Axiom + Start", (_, _) => RestoreAxiomAndStart()));
         panel.Controls.Add(liveProgButtons);
 
         var profileButtons = Row();
@@ -729,8 +743,12 @@ internal sealed class MainForm : Form
         var panel = NewStack();
         page.Controls.Add(panel);
 
+        diagnosticsRouteStateLabel = HealthLabel("Route state: --");
+        diagnosticsRouteStateLabel.MaximumSize = new Size(1050, 0);
         diagnosticsRouteLabel = HealthLabel("Route: --");
         diagnosticsRouteLabel.MaximumSize = new Size(1050, 0);
+        diagnosticsRouteEventLabel = HealthLabel("Last route event: --");
+        diagnosticsRouteEventLabel.MaximumSize = new Size(1050, 0);
         diagnosticsScriptLabel = HealthLabel("Script: --");
         diagnosticsScriptLabel.MaximumSize = new Size(1050, 0);
         diagnosticsProcessorLabel = HealthLabel("Processor: --");
@@ -738,12 +756,15 @@ internal sealed class MainForm : Form
         diagnosticsProfileLabel = HealthLabel("Profile: Manual");
         diagnosticsProfileLabel.MaximumSize = new Size(1050, 0);
 
+        panel.Controls.Add(diagnosticsRouteStateLabel);
         panel.Controls.Add(diagnosticsRouteLabel);
+        panel.Controls.Add(diagnosticsRouteEventLabel);
         panel.Controls.Add(diagnosticsScriptLabel);
         panel.Controls.Add(diagnosticsProcessorLabel);
         panel.Controls.Add(diagnosticsProfileLabel);
         var diagnosticActions = Row();
         diagnosticActions.Controls.Add(Button("Export Diagnostic Report", (_, _) => ExportDiagnosticReport()));
+        diagnosticActions.Controls.Add(Button("Copy Diagnostic Summary", (_, _) => CopyDiagnosticSummary()));
         diagnosticActions.Controls.Add(Button("Open Health History", (_, _) => OpenHealthHistory()));
         diagnosticActions.Controls.Add(Button("Clear Health History", (_, _) => ClearHealthHistory()));
         panel.Controls.Add(diagnosticActions);
@@ -1110,7 +1131,7 @@ internal sealed class MainForm : Form
 
         SaveSelectedRoute();
         SetWindowsDefaultToCapture();
-        AppendLog("Route set to VB-CABLE source -> selected processed output.");
+        SetRouteEvent("Route preset applied: VB-CABLE source -> selected processed output.");
     }
 
     private void UseSteamToRealtekRoute()
@@ -1119,7 +1140,7 @@ internal sealed class MainForm : Form
         SelectDeviceByName(outputDevice, "Realtek");
         SaveSelectedRoute();
         SetWindowsDefaultToCapture();
-        AppendLog("Route set to Steam Streaming Speakers -> Realtek.");
+        SetRouteEvent("Route preset applied: Steam Streaming Speakers -> Realtek.");
     }
 
     private void UseSteamToEarPodsRoute()
@@ -1128,7 +1149,7 @@ internal sealed class MainForm : Form
         SelectDeviceByName(outputDevice, "EarPods");
         SaveSelectedRoute();
         SetWindowsDefaultToCapture();
-        AppendLog("Route set to Steam Streaming Speakers -> EarPods.");
+        SetRouteEvent("Route preset applied: Steam Streaming Speakers -> EarPods.");
     }
 
     private void SetWindowsDefaultToCapture()
@@ -1164,6 +1185,7 @@ internal sealed class MainForm : Form
             {
                 controllerState.OwnsWindowsDefault = true;
                 SaveControllerState();
+                SetRouteEvent($"Windows default playback set to source endpoint: {capture.Name}.");
                 UpdateWindowsDefaultStatus();
             }
         }
@@ -1215,7 +1237,7 @@ internal sealed class MainForm : Form
         {
             controllerState.OwnsWindowsDefault = false;
             SaveControllerState();
-            AppendLog("Windows default output was changed outside Axiom. Route ownership released.");
+            SetRouteEvent("Windows default output changed outside Axiom; route ownership released.");
         }
         windowsDefaultLabel.Text = $"Windows default: {current.Name}; Axiom ownership: {(controllerState.OwnsWindowsDefault ? "active" : "inactive")}";
         windowsDefaultLabel.ForeColor = matchesAxiom ? Color.FromArgb(73, 217, 151) : Color.FromArgb(240, 170, 80);
@@ -1256,6 +1278,7 @@ internal sealed class MainForm : Form
             {
                 controllerState.OwnsWindowsDefault = false;
                 SaveControllerState();
+                SetRouteEvent($"Previous Windows default playback restored: {previous.Name}.");
                 UpdateWindowsDefaultStatus();
             }
         }
@@ -1396,7 +1419,7 @@ internal sealed class MainForm : Form
                 var missing = !capturePresent && !outputPresent
                     ? "capture/source and processed output"
                     : !capturePresent ? "capture/source" : "processed output";
-                AppendLog($"Route recovery waiting: saved {missing} endpoint disconnected.");
+                SetRouteEvent($"Waiting for saved {missing} endpoint to reconnect.");
                 if (restartAfterRouteRecovery) StopAllProcessors();
             }
 
@@ -1441,7 +1464,7 @@ internal sealed class MainForm : Form
             var shouldRestart = restartAfterRouteRecovery;
             routeRecoveryPending = false;
             restartAfterRouteRecovery = false;
-            AppendLog("Route recovery complete: saved endpoints are available again.");
+            SetRouteEvent("Route recovery complete: saved endpoints are available again.");
             SetWindowsDefaultToCapture();
             if (shouldRestart) StartProcessor();
         }
@@ -1495,7 +1518,7 @@ internal sealed class MainForm : Form
         routeRecoveryPending = false;
         restartAfterRouteRecovery = false;
         SetWindowsDefaultToCapture();
-        AppendLog($"Auto-routed listening output: {previousOutputName} -> {selectedOutput?.Name}.");
+        SetRouteEvent($"Auto-routed listening output: {previousOutputName} -> {selectedOutput?.Name}.");
         if (restartProcessor)
         {
             processorFailureState = "Processor restarted after automatic route change.";
@@ -1925,13 +1948,34 @@ internal sealed class MainForm : Form
         SetValue("LiveProg", "file", path);
         if (liveProgFileText is not null) liveProgFileText.Text = path;
         File.WriteAllText(configPath, BuildConfigText(), Encoding.UTF8);
-        AppendLog($"Loaded {label} LiveProg test script.");
+        AppendLog($"Loaded {label} LiveProg test script. Use this to confirm that Axiom/JamesDSP is audibly in the path.");
+        StartProcessorIfReady($"{label} confidence test");
     }
 
     private void RestoreAxiomLiveProg()
     {
         SaveConfigAndRuntimeEel(selectAxiomRuntime: true);
         AppendLog("Restored generated Axiom LiveProg script.");
+    }
+
+    private void RestoreAxiomAndStart()
+    {
+        RestoreAxiomLiveProg();
+        StartProcessorIfReady("Axiom restore");
+    }
+
+    private void StartProcessorIfReady(string reason)
+    {
+        if (IsProcessorRunning()) return;
+        var routeError = ValidateRoute(captureDevice.SelectedItem as DeviceInfo, outputDevice.SelectedItem as DeviceInfo);
+        var scriptError = ValidateLiveProgScript(GetValue("LiveProg", "file", ""));
+        if (routeError is not null || scriptError is not null)
+        {
+            AppendLog($"{reason} loaded, but processor start is blocked: {routeError ?? scriptError}");
+            return;
+        }
+        AppendLog($"{reason} starting processor.");
+        StartProcessor();
     }
 
     private void SaveProfile(string type)
@@ -2421,6 +2465,14 @@ internal sealed class MainForm : Form
         AppendLog("Diagnostic report exported: " + path);
     }
 
+    private void CopyDiagnosticSummary()
+    {
+        var report = BuildDiagnosticReport();
+        Clipboard.SetText(report);
+        diagnosticsBox.Text = report;
+        AppendLog("Diagnostic summary copied to clipboard.");
+    }
+
     private void OpenHealthHistory()
     {
         Directory.CreateDirectory(diagnosticsDir);
@@ -2527,9 +2579,14 @@ internal sealed class MainForm : Form
         sb.AppendLine("Generated: " + DateTime.Now.ToString("O", CultureInfo.InvariantCulture));
         sb.AppendLine();
         sb.AppendLine("Route");
+        sb.AppendLine("  State: " + BuildRouteStateText(
+            CountRunningProcessors(),
+            ValidateRoute(capture, output),
+            ValidateLiveProgScript(GetValue("LiveProg", "file", ""))));
         sb.AppendLine("  Capture/source: " + FormatDevice(capture));
         sb.AppendLine("  Processed output: " + FormatDevice(output));
         sb.AppendLine("  Recommendation: " + RouteRecommendation(capture, output));
+        sb.AppendLine("  Last event: " + lastRouteEvent);
         sb.AppendLine();
         sb.AppendLine("Processor");
         sb.AppendLine("  Running: " + IsProcessorRunning());
@@ -2659,10 +2716,16 @@ internal sealed class MainForm : Form
 
     private bool IsProcessorRunning()
     {
-        var processes = Process.GetProcessesByName("AxiomJamesDSPConsole");
-        var running = processes.Length > 0;
-        foreach (var process in processes) process.Dispose();
+        var running = CountRunningProcessors() > 0;
         return running;
+    }
+
+    private static int CountRunningProcessors()
+    {
+        var processes = Process.GetProcessesByName("AxiomJamesDSPConsole");
+        var count = processes.Length;
+        foreach (var process in processes) process.Dispose();
+        return count;
     }
 
     private static void SelectDevice(ComboBox combo, string savedId, int savedIndex, int fallbackSelectedIndex)
@@ -2910,11 +2973,41 @@ internal sealed class MainForm : Form
         return (bits[3] >> 16) & 0x7F;
     }
 
+    private string BuildRouteStateText(int runningCount, string? routeError, string? scriptError)
+    {
+        if (routeRecoveryPending) return "Route state: Waiting for device - saved endpoint disconnected";
+        if (processorRestartPending) return "Route state: Recovering - " + processorFailureState;
+        if (runningCount > 1) return $"Route state: Needs action - {runningCount} processor instances running";
+        if (runningCount == 1)
+        {
+            if (!string.IsNullOrWhiteSpace(processorFailureState)) return "Route state: Recovered - " + processorFailureState;
+            return "Route state: Processing - audio is routed through Axiom";
+        }
+        if (!string.IsNullOrWhiteSpace(processorFailureState)) return "Route state: Needs action - " + processorFailureState;
+        if (routeError is not null) return "Route state: Needs action - " + routeError;
+        if (scriptError is not null) return "Route state: Needs action - " + scriptError;
+        return "Route state: Ready - click Start Processor to hear Axiom";
+    }
+
+    private Color RouteStateColor(int runningCount, string? routeError, string? scriptError)
+    {
+        if (routeRecoveryPending || processorRestartPending || !string.IsNullOrWhiteSpace(processorFailureState) || routeError is not null || scriptError is not null)
+        {
+            return Color.FromArgb(240, 170, 80);
+        }
+        return runningCount <= 1 ? Color.FromArgb(73, 217, 151) : Color.FromArgb(240, 120, 120);
+    }
+
+    private void SetRouteEvent(string text)
+    {
+        lastRouteEvent = $"{DateTime.Now:HH:mm:ss} - {text}";
+        AppendLog(text);
+        UpdateStatus();
+    }
+
     private void UpdateStatus()
     {
-        var runningProcesses = Process.GetProcessesByName("AxiomJamesDSPConsole");
-        var runningCount = runningProcesses.Length;
-        foreach (var process in runningProcesses) process.Dispose();
+        var runningCount = CountRunningProcessors();
         var running = runningCount > 0;
         var capture = captureDevice.SelectedItem as DeviceInfo;
         var output = outputDevice.SelectedItem as DeviceInfo;
@@ -2927,24 +3020,17 @@ internal sealed class MainForm : Form
             unexpectedExitWindowStarted = DateTime.MinValue;
             processorFailureState = "";
         }
-        statusLabel.Text = routeRecoveryPending
-            ? "Route disconnected - waiting for saved endpoints"
-            : processorRestartPending
-                ? processorFailureState
-            : running
-                ? runningCount == 1
-                    ? string.IsNullOrWhiteSpace(processorFailureState) ? "Processor running" : processorFailureState
-                    : $"Processor conflict - {runningCount} instances running"
-                : !string.IsNullOrWhiteSpace(processorFailureState)
-                    ? processorFailureState
-                : routeConflict
-                    ? "Processor stopped - route needs attention"
-                    : scriptError is not null
-                        ? "Processor stopped - script needs attention"
-                    : "Processor stopped - settings are not audible until started";
-        statusLabel.ForeColor = routeRecoveryPending || processorRestartPending || !running && !string.IsNullOrWhiteSpace(processorFailureState)
-            ? Color.FromArgb(240, 170, 80)
-            : runningCount == 1 ? Color.FromArgb(73, 217, 151) : Color.FromArgb(240, 120, 120);
+        var routeStateText = BuildRouteStateText(runningCount, routeError, scriptError);
+        statusLabel.Text = routeStateText;
+        statusLabel.ForeColor = RouteStateColor(runningCount, routeError, scriptError);
+        routeStateLabel.Text = routeStateText;
+        routeStateLabel.ForeColor = statusLabel.ForeColor;
+        diagnosticsRouteStateLabel.Text = routeStateText;
+        diagnosticsRouteStateLabel.ForeColor = statusLabel.ForeColor;
+        routeEventLabel.Text = "Last route event: " + lastRouteEvent;
+        routeEventLabel.ForeColor = Color.FromArgb(210, 205, 170);
+        diagnosticsRouteEventLabel.Text = routeEventLabel.Text;
+        diagnosticsRouteEventLabel.ForeColor = routeEventLabel.ForeColor;
         startButton.Enabled = !running && !routeConflict && scriptError is null && !routeRecoveryPending && !processorRestartPending;
         stopButton.Enabled = running;
         var routeText = $"Route: {FormatDevice(capture)} -> {FormatDevice(output)}. {RouteRecommendation(capture, output)}";

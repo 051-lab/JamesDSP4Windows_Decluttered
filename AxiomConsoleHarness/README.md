@@ -213,6 +213,10 @@ Phase 1 hardening:
   listening devices such as EarPods, headphones, USB, or Bluetooth outputs, and
   falls back to Realtek or another physical output when the external device is
   removed.
+- The Routing and Diagnostics tabs show explicit route states: Ready,
+  Processing, Waiting for device, Recovering, Recovered, and Needs action.
+  They also show the last route event so device changes and recovery actions
+  are visible without reading raw logs.
 - The controller includes a one-click Steam-to-Realtek route preset for laptop
   speaker testing.
 - Temporary route-test EEL files live under `runtime/` and are not accepted
@@ -282,7 +286,8 @@ Phase 2 audio-engine hardening:
   exceed the configured WASAPI buffer budget. This avoids treating an isolated
   Windows scheduling outlier as equivalent to dropped or starved audio.
 - The Diagnostics tab can open or clear persistent health history. Exported
-  reports include the session warning count and health-history path.
+  reports include the session warning count and health-history path. A compact
+  diagnostic summary can also be copied directly to the clipboard.
 - Before setting the selected capture endpoint as the Windows default, the
   controller records the previous default endpoint by stable ID. It can restore
   that endpoint on demand or automatically on application exit. If another
@@ -296,6 +301,10 @@ Phase 2 audio-engine hardening:
   - `runtime/axiom-test-lowcut.eel`: aggressive static high-pass test.
   - `runtime/axiom-test-pulse-gate.eel`: obvious on/off level pulse for
     confirming LiveProg is audibly in the path.
+- Loading either confidence-test script starts the processor automatically when
+  the selected route and script are valid. `Restore Axiom + Start` returns to
+  the generated Axiom LiveProg script and starts processing from the current
+  route.
 
 ## Automated Verification
 
